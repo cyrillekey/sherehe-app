@@ -12,9 +12,20 @@ const Signup = (props) => {
         <ImageBackground style={style.container} source={{uri:'https://images.unsplash.com/photo-1609330579483-2a25134ec64f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlxb3VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'}}>
         <Image style={style.image} source={{uri: 'https://image.shutterstock.com/image-vector/bar-lettering-illustration-label-badge-260nw-1034296870.jpg',}}/>
         <Text style={style.welcome}>Welcome to sherehe</Text>
-        <Text style={style.login}>Fill in your details to continue</Text>
+        <Text style={style.login}>Signup to start</Text>
         
         <StatusBar style="auto"/>
+        <View style={style.inputView}>
+            <TextInput
+                style={style.TextInput}
+                placeholder="Email"
+                placeholderTextColor="#003f5c"
+                defaultValue={phone}
+                onChangeText={(phone)=>setPhone(phone)}
+                autoComplete="email"
+                
+            />
+        </View>
         <View style={style.inputView}>
             <TextInput
                 style={style.TextInput}
