@@ -4,7 +4,7 @@ import {StyleSheet,Image, Text, View ,TextInput,TouchableOpacity,Alert,ImageBack
 import { color } from "react-native-elements/dist/helpers";
 
 
-const Signup = (props) => {
+const Signup = (props,{navigation}) => {
   const [phone, setPhone] = useState("");
   const [password,setPassword]=useState("");
   return (
@@ -61,7 +61,7 @@ const Signup = (props) => {
             <Text style={style.forgt_btn}> Forgot password</Text>
         </TouchableOpacity>
         <TouchableOpacity>
-        <Text style={style.footer}>Dont have an account ?</Text>
+        <Text style={style.footer} onPress={()=>props.navigation.navigate("login")}>Dont have an account ?</Text>
         </TouchableOpacity>
         </ImageBackground>
     

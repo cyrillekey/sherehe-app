@@ -50,7 +50,7 @@ const Login = (props) => {
             <Text style={style.forgt_btn}> Forgot password</Text>
         </TouchableOpacity>
         <TouchableOpacity>
-        <Text style={style.footer}>Dont have an account ?</Text>
+        <Text style={style.footer} onPress={()=>props.navigation.navigate("signup")}>Dont have an account ?</Text>
         </TouchableOpacity>
         </ImageBackground>
     
