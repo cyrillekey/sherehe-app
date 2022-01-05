@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import {StyleSheet,Image, Text, View ,TextInput,TouchableOpacity,Alert,ImageBackground} from "react-native";
+import {StyleSheet,Image, Text, View ,TextInput,TouchableOpacity,Alert,ImageBackground,CheckBox} from "react-native";
 import { color } from "react-native-elements/dist/helpers";
 
 
