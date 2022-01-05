@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import {StyleSheet,Image, Text, View ,TextInput,TouchableOpacity,Alert,ImageBackground,CheckBox} from "react-native";
+import {StyleSheet,Image, Text, View ,TextInput,TouchableOpacity,Alert,ImageBackground,KeyboardAvoidingView} from "react-native";
 
 
 
@@ -11,6 +11,7 @@ const Signup = (props,{navigation}) => {
   return (
     
         <ImageBackground style={style.container} source={{uri:'https://images.unsplash.com/photo-1609330579483-2a25134ec64f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlxb3VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'}}>
+            
         <Image style={style.image} source={{uri: 'https://image.shutterstock.com/image-vector/bar-lettering-illustration-label-badge-260nw-1034296870.jpg',}}/>
         <Text style={style.welcome}>Welcome to sherehe</Text>
         <Text style={style.login}>Signup to start</Text>
@@ -39,6 +40,7 @@ const Signup = (props,{navigation}) => {
                 
             />
         </View>
+        
         <View style={style.inputView}>
             <TextInput
                 style={style.TextInput}
@@ -49,6 +51,7 @@ const Signup = (props,{navigation}) => {
                 onChangeText={(password)=>setPassword(password)}
             />
         </View>
+        
         <TouchableOpacity style={style.loginBtn} onPress={()=>{Alert.alert("Hello world","Error occured",[{
             text:"Cancel",
             onPress:()=>{console.log("Login button")},

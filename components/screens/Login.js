@@ -25,6 +25,7 @@ const Login = (props) => {
                 }
             />
         </View>
+        
         <View style={style.inputView}>
             <TextInput
                 style={style.TextInput}
