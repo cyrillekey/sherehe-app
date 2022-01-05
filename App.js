@@ -7,6 +7,7 @@ import Login from './components/screens/Login';
 import Signup from './components/screens/Signup';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createStackNavigator,CardStyleInterpolators } from '@react-navigation/stack';
+import Tabs from './components/Navigation/Tabs';
 
 //const Stack=createNativeStackNavigator();
 
@@ -16,6 +17,9 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
     headerShown: false,cardStyleInterpolator:CardStyleInterpolators.forFadeFromCenter}} >
+        <Stack.Screen name="home">
+          {props=><Tabs {...props}/>}
+        </Stack.Screen>
         <Stack.Screen name="signup" >
           {props=><Signup {...props} />}
         </Stack.Screen>
