@@ -1,12 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import {StyleSheet,Image, Text, View ,TextInput,TouchableOpacity,Alert,ImageBackground,CheckBox} from "react-native";
-import { color } from "react-native-elements/dist/helpers";
+
 
 
 const Signup = (props,{navigation}) => {
   const [phone, setPhone] = useState("");
   const [password,setPassword]=useState("");
+  const [email,setEmail]=useState("");
   return (
     
         <ImageBackground style={style.container} source={{uri:'https://images.unsplash.com/photo-1609330579483-2a25134ec64f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlxb3VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'}}>
@@ -20,9 +21,10 @@ const Signup = (props,{navigation}) => {
                 style={style.TextInput}
                 placeholder="Email"
                 placeholderTextColor="#003f5c"
-                defaultValue={phone}
-                onChangeText={(phone)=>setPhone(phone)}
+                defaultValue={email}
+                onChangeText={(email)=>setEmail(email)}
                 autoComplete="email"
+                keyboardType="email-address"
                 
             />
         </View>
@@ -32,8 +34,9 @@ const Signup = (props,{navigation}) => {
                 placeholder="Phone Number"
                 placeholderTextColor="#003f5c"
                 defaultValue={phone}
-                onChangeText={(phone)=>setPhone(phone)
-                }
+                onChangeText={(phone)=>setPhone(phone)}
+                keyboardType="phone-pad"
+                
             />
         </View>
         <View style={style.inputView}>
