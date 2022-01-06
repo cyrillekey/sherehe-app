@@ -1,8 +1,10 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { Text,StyleSheet,View,Image, TouchableOpacity } from 'react-native';
+import Home from '../Home'
+import DetailsScreen from '../screens/Details';
 
 const Tab=createBottomTabNavigator();
-import Home from '../Home'
+
 const CustomTabButton=({children,onPress})=>(
     <TouchableOpacity style={{
         top:-30,
