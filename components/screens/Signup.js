@@ -54,11 +54,11 @@ const Signup = (props,{navigation}) => {
         
         <TouchableOpacity style={style.loginBtn} onPress={()=>{Alert.alert("Hello world","Error occured",[{
             text:"Cancel",
-            onPress:()=>{console.log("Login button")},
+            onPress:()=>{},
             style:"cancel"
         },{
             text:"OK",
-            onPress:()=>{console.log("ok pressed")},
+            onPress:()=>{},
             style:"OK"
         }])}}>
             <Text style={style.loginTxt}>Signup</Text>

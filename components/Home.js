@@ -3,24 +3,29 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { View ,Text,Image}from "react-native";
 import Swiper from 'react-native-swiper';
+import Card from "./components/Product";
 
-const Home=()=>{
+const Home=(props)=>{
     return(
         <View>
             <StatusBar/>
             <View style={styles.sliderContainer}>
             <Swiper>
             <View style={styles.slide}>
-                <Image source={require('./Images/main.jpg')} resizeMode="cover" style={styles.sliderImage}/>
+                <Image source={require('./Images/main.png')} resizeMode="cover" style={styles.sliderImage}/>
             </View>
             <View style={styles.slide}>
-                <Image source={require('./Images/main.jpg')} resizeMode="cover" style={styles.sliderImage}/>
+                <Image source={require('./Images/main.png')} resizeMode="cover" style={styles.sliderImage}/>
             </View>
             <View style={styles.slide}>
-                <Image source={require('./Images/main.jpg')} resizeMode="cover" style={styles.sliderImage}/>
+                <Image source={require('./Images/main.png')} resizeMode="cover" style={styles.sliderImage}/>
             </View>
             </Swiper>
             </View>
+            <Card name="mango" price="150">
+                {props}
+            </Card>
+
         </View>
     );
 }

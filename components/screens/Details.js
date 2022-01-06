@@ -1,17 +1,18 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import {View, SafeAreaView, Image, Text, StyleSheet,ScrollView} from 'react-native';
 import Swiper from 'react-native-swiper';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-
 const DetailsScreen = (props) => {
+
 const [count,setCount]=useState(0);
   return (
+    <ScrollView>
     <SafeAreaView
+      
       style={{
         flex: 1,
         backgroundColor: 'white',
       }}>
-          <View style={{height:'40%'}}>
+          <View style={{height:300}}>
           <Swiper height={'100%'}>  
       <View style={style.imageContainer}>
         <Image source={{uri: 'https://thumbs.dreamstime.com/b/jack-daniels-tennessee-whiskey-bottle-casks-jack-daniels-tennessee-whiskey-small-bottle-casks-background-180208272.jpg'}} style={{resizeMode: 'cover', flex:1,width:'100%'}} />
@@ -46,7 +47,7 @@ const [count,setCount]=useState(0);
           <View style={style.priceTag}>
             <Text
               style={{
-                marginLeft: 15,
+                marginLeft: 30,
                 color: 'white',
                 fontWeight: 'bold',
                 fontSize: 16,
@@ -64,7 +65,7 @@ const [count,setCount]=useState(0);
               lineHeight: 22,
               marginTop: 10,
             }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at orci id ipsum ullamcorper blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet
           </Text>
           <View
             style={{
@@ -99,7 +100,9 @@ const [count,setCount]=useState(0);
 
             <View style={style.buyBtn}>
               <Text
-                style={{color: 'white', fontSize: 18, fontWeight: 'bold'}}>
+                style={{color: 'white', fontSize: 18, fontWeight: 'bold'}}
+                onPress={()=>console.log
+                ("hello")}>
                 Buy
               </Text>
             </View>
@@ -107,6 +110,7 @@ const [count,setCount]=useState(0);
         </View>
       </View>
     </SafeAreaView>
+    </ScrollView>
     
   );
 };
@@ -147,29 +151,25 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: 60,
-    height: 40,
+    height: 50,
   },
-  borderBtnText: {fontWeight: 'bold', fontSize: 28},
+  borderBtnText: {fontWeight: 'bold', fontSize: 28,width:'100%',textAlign:'center'},
   buyBtn: {
     width: 130,
     height: 50,
-    backgroundColor: 'green',
+    backgroundColor: '#ff54ff',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
   },
   priceTag: {
-    backgroundColor: 'green',
-    width: 80,
-    height: 40,
+    backgroundColor: 'gold',
+    width: 120,
+    height: 50,
     justifyContent: 'center',
-    borderTopLeftRadius: 25,
-    borderBottomLeftRadius: 25,
-  },
-  swiper:{
-      borderWidth:200
-
-  },
+    borderTopLeftRadius: 14,
+    borderBottomLeftRadius: 14,
+  }
 });
 
 export default DetailsScreen;

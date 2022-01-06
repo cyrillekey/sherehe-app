@@ -5,7 +5,11 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "splash": {
+      "image": "./components/Images/main.png",
+      "resizeMode":"cover"
+    }
   },
   "name": "example-ren"
 }
